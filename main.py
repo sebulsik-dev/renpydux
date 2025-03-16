@@ -1,6 +1,5 @@
 from renpydux import ActionReducerMapBuilder, RenpyduxState, createReducer, RenpyduxStore, ActionableStateItem, combineReducers, RenpyduxReducer
 from immer import Proxy
-from immer.attr import s
 from typing import Callable, Optional
 from enum import Enum
 from dataclasses import dataclass, field
@@ -16,7 +15,6 @@ class BattleActionType(Enum):
 
 
 @dataclass
-@s(auto_attribs=True)
 class Character(RenpyduxState):
     name: str
     attack: int = 10
@@ -25,7 +23,6 @@ class Character(RenpyduxState):
 
 
 @dataclass
-@s(auto_attribs=True)
 class BattleState(RenpyduxState):
     player: Character
     enemy: Character

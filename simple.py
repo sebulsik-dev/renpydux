@@ -1,5 +1,5 @@
 import time
-from renpydux import RenpyduxReducer, RenpyduxStore, ActionableStateItem, combineReducers
+from renpydux import RenpyduxStore, ActionableStateItem, combineReducers
 from immer import Proxy as ImmerProxy, produce
 from dataclasses import dataclass
 
